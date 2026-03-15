@@ -19,9 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="Pages\Clubs\Elements\" />
     <Folder Include="Pages\Users\Elements\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\ic-club.png" />
   </ItemGroup>
 
 </Project>
