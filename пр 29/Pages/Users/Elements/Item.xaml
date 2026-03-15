@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="пр_29.Pages.Users.Elements.Item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:пр_29.Pages.Users.Elements"
+             mc:Ignorable="d">
+
+    <Grid Margin="10" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100px"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Иконка пользователя -->
+        <Image Width="80" Height="80" VerticalAlignment="Top" Margin="10" Source="/Images/ic-user.png" />
+
+        <!-- Кнопки действий -->
+        <Button Click="EditUser" Height="25" Content="Изменить" VerticalAlignment="Top" Margin="10,95,10,0"
+                Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White" />
+        <Button Click="DeleteUser" Height="25" Content="Удалить" VerticalAlignment="Top" Margin="10,125,10,10"
+                Background="#FFCD1E1E" BorderBrush="#FFCD1E1E" Foreground="White" />
+
+        <!-- Правая колонка с полями -->
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+            <!-- Левая колонка: Дата аренды -->
+            <Label Content="Дата аренды:" Grid.Row="0" Grid.Column="0" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+            <TextBox x:Name="RentStart" Text="01.01.2024" Grid.Row="0" Grid.Column="0" 
+                     VerticalAlignment="Top" Margin="10,36,10,0" Height="25"
+                     VerticalContentAlignment="Center" IsEnabled="False"/>
+
+            <!-- Правая колонка: Продолжительность -->
+            <Label Content="Продолжительность:" Grid.Row="0" Grid.Column="1" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+            <TextBox x:Name="Duration" Text="2" Grid.Row="0" Grid.Column="1" 
+                     VerticalAlignment="Top" Margin="10,36,10,0" Height="25"
+                     VerticalContentAlignment="Center" IsEnabled="False"/>
+
+            <!-- Левая колонка: Время аренды -->
+            <Label Content="Время аренды:" Grid.Row="1" Grid.Column="0" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,66,0,0"/>
+            <TextBox x:Name="RentTime" Text="18:00" Grid.Row="1" Grid.Column="0" 
+                     VerticalAlignment="Top" Margin="10,92,10,0" Height="25"
+                     VerticalContentAlignment="Center" IsEnabled="False"/>
+
+            <!-- Правая колонка: Клуб -->
+            <Label Content="Клуб:" Grid.Row="1" Grid.Column="1" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,66,0,0"/>
+            <TextBox x:Name="Club" Text="Название клуба" Grid.Row="1" Grid.Column="1" 
+                     VerticalAlignment="Top" Margin="10,92,10,0" Height="25"
+                     VerticalContentAlignment="Center" IsEnabled="False"/>
+
+            <!-- ФИО (на две колонки) -->
+            <Label Content="ФИО:" Grid.Row="2" Grid.Column="0" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,122,0,0"/>
+            <TextBox x:Name="FIO" Text="Иванов Иван Иванович" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                     VerticalAlignment="Top" Margin="10,148,10,0" Height="25"
+                     VerticalContentAlignment="Center" IsEnabled="False"/>
+        </Grid>
+    </Grid>
+</UserControl>

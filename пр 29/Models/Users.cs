@@ -9,7 +9,7 @@ namespace пр_29.Models
     public class Users
     {
         public int Id { get; set; }
-        public string FIO { get; set; }
+        public string FIO { get; set; } = string.Empty;
         public DateTime RentStart {  get; set; }
         public int Duration {  get; set; }
         public int IdClub {  get; set; }
